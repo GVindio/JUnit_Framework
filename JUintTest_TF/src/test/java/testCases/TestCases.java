@@ -44,7 +44,8 @@ public class TestCases extends TestBase {
 		testpages.singleItemCheckBox(); // Checking single item
 		testpages.removeSingleItem(); // Removing single item
 		testpages.verifyItemRemoved(); // Verifying single item is removed
-
+		boolean verify = testpages.removeSingleItem(); 
+		Assert.assertTrue(verify);
 	}
 	
 	@Test
@@ -58,6 +59,8 @@ public class TestCases extends TestBase {
 		testpages.checkToggleAll(); // Checking Toggle All box
 		testpages.removeAllItems(); // Removing all items
 		testpages.verifyAllItemsRemoved(); // Verifying all items removed
+		boolean verify = testpages.removeAllItems();
+		Assert.assertTrue(verify);
 		
 		
 	}

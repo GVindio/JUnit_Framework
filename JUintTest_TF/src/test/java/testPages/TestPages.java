@@ -47,11 +47,11 @@ public class TestPages extends TestBase {
 
 			int min = 0;
 			int max = 10000000;
-			int random_int = (int) Math.floor(Math.random() * (max - min + 1) + min);
+			int random_int = (int) Math.floor(Math.random() * (max - min + 1) + min); // Formula for random number
 
-			String random = String.valueOf(random_int);
+			String random = String.valueOf(random_int); // Value of random number
 
-			dataInput.sendKeys("Hello Moon".concat(random));
+			dataInput.sendKeys("Hello Moon".concat(random)); // Concat String "Hello Moon" with random value
 			addBtn.click();
 
 			i++;
@@ -81,7 +81,7 @@ public class TestPages extends TestBase {
 		System.out.println("Found " + elements.size() + " checkboxes");
 		System.out.println("Found " + selected + " checkboxes were selected");
 
-		if (selected == elements.size()) {
+		if (selected == elements.size()) { // if not true will switch to else block and else block will return false
 			return true;
 		} else
 			return false;
@@ -93,8 +93,9 @@ public class TestPages extends TestBase {
 
 	}
 
-	public void removeSingleItem() {
+	public boolean removeSingleItem() {
 		removeItem.click();
+		return false;
 	}
 
 	public void verifyItemRemoved() {
@@ -109,8 +110,9 @@ public class TestPages extends TestBase {
 
 	}
 
-	public void removeAllItems() {
+	public boolean removeAllItems() {
 		removeItem.click();
+		return false;
 	}
 	
 	public void verifyAllItemsRemoved() {
@@ -122,7 +124,7 @@ public class TestPages extends TestBase {
 			System.out.println("All Elements not Removed");
 		} else { // Else if size is 0, then element is not present
 
-			System.out.println("Elements Removed");
+			System.out.println("All Elements Removed");
 		}
 
 	
